@@ -63,7 +63,7 @@ main .post {
 footer {
     position: absolute;
     bottom: 0;
-    height: 50px;
+    height: 0;
     width: 100%;
     text-align: center;
     font-size: 0.85em;
@@ -72,12 +72,37 @@ footer {
     width: 50px;
     /* height: 30px; */
 }
+.post img:hover {
+    cursor: pointer;
+}
 #infoBox {
-    width: 400px;
+    max-width: 400px;
     position: fixed;
     top: 40%;
     left: 40%;
-    background: rgba(0,0,0,.7);
+    background: rgba(128, 101, 101);
     color:rgba(255,255,255);
-    /* visibility: hidden; */
+    padding: 2% 5%;
+    z-index: 11;
+    border: rgb(255, 255, 255) dashed 1px;
+}
+#infoBox p {
+    max-width: 280px;
+}
+#infoBox p:first-child {
+    font-weight: bold;
+    font-size:larger;
+    text-align: center;
+}
+#infoBox p:nth-child(n+2) {
+    text-align:justify;
+    width: 100%;
+}
+#infoBox .close {
+    font-weight: bold;
+    color:rgb(251, 255, 43);
+    text-transform: uppercase;
+}
+#infoBox .close:hover {
+    cursor: pointer;
 }
